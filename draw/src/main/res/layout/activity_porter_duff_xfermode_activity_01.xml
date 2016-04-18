@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.testing.draw.porterDuffXfermode.PorterDuffXfermodeActivity_01">
+
+    <ImageView
+        android:id="@+id/porterduffx_img"
+        android:layout_width="@dimen/dimen_600dp"
+        android:layout_height="@dimen/dimen_400dp"
+        android:layout_centerHorizontal="true"/>
+
+    <com.example.testing.draw.porterDuffXfermode.PorterDuffXfermodeView
+        android:layout_width="@dimen/dimen_400dp"
+        android:layout_height="@dimen/dimen_600dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

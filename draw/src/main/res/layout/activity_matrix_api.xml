@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.testing.draw.matrix.MatrixApiActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5">
+
+        <ImageView
+            android:id="@+id/matrix_test_img"
+            android:layout_width="@dimen/dimen_100dp"
+            android:layout_height="@dimen/dimen_100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dimen_100dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher"/>
+
+    </RelativeLayout>
+
+    <GridLayout
+        android:id="@+id/matrix_grid"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"
+        android:columnCount="3"
+        android:rowCount="3"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="@dimen/dimen_25sp"
+            android:text="Change"
+            android:onClick="btn_Change"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="@dimen/dimen_25sp"
+            android:text="Reset"
+            android:onClick="btn_Reset"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.testing.draw.colormatrix.ColorMatrixActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <ImageView
+            android:id="@+id/test_img2"
+            android:layout_width="@dimen/dimen_500dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/dimen_30sp"
+            android:text="反转效果"
+            android:onClick="effect_fanzhuan"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dimen_80dp"
+            android:textSize="@dimen/dimen_30sp"
+            android:text="怀旧效果"
+            android:onClick="effect_huaijiu"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dimen_150dp"
+            android:textSize="@dimen/dimen_30sp"
+            android:text="去色效果"
+            android:onClick="effect_quse"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dimen_220dp"
+            android:textSize="@dimen/dimen_30sp"
+            android:text="高饱和效果"
+            android:onClick="effect_gaobaohe"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dimen_300dp"
+            android:textSize="@dimen/dimen_30sp"
+            android:text="灰度效果"
+            android:onClick="effect_huidu"/>
+    </RelativeLayout>
+
+    <GridLayout
+        android:id="@+id/gridlayout_group"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:columnCount="5"
+        android:rowCount="4"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="btnChange"
+            android:text="Change"/>
+
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="btnReset"
+            android:text="Reset"/>
+    </LinearLayout>
+
+</LinearLayout>
