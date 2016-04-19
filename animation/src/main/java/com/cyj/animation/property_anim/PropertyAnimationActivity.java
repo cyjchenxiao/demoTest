@@ -1,8 +1,11 @@
 package com.cyj.animation.property_anim;
 
 import android.animation.ObjectAnimator;
+import android.animation.PropertyValuesHolder;
+import android.animation.ValueAnimator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -13,6 +16,8 @@ public class PropertyAnimationActivity extends AppCompatActivity implements View
 
     private Button mBtnObjAnimTranslation;
     private Button mBtnObjWrapperAnimator;
+    private Button mBtnPropertyValueHolder;
+    private Button mBtnValueAnimator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +30,12 @@ public class PropertyAnimationActivity extends AppCompatActivity implements View
         mBtnObjWrapperAnimator = (Button) findViewById(R.id.btn_obj_wrapper);
         mBtnObjWrapperAnimator.setOnClickListener(this);
 
+        mBtnPropertyValueHolder = (Button) findViewById(R.id.btn_property_value_holder);
+        mBtnPropertyValueHolder.setOnClickListener(this);
+
+        mBtnValueAnimator = (Button) findViewById(R.id.btn_value_animator);
+        mBtnValueAnimator.setOnClickListener(this);
+
     }
 
     @Override
@@ -36,11 +47,40 @@ public class PropertyAnimationActivity extends AppCompatActivity implements View
                         "translationX",
                         300);
                 objAnim.setDuration(1500);
+                objAnim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                    @Override
+                    public void onAnimationUpdate(ValueAnimator animation) {
+                        Float value = (Float) animation.getAnimatedValue();
+                        Log.d("VALUE_ANIMATOR", ">>>>> animation.getAnimatedValue: " + value);
+                    }
+                });
                 objAnim.start();
                 break;
             case R.id.btn_obj_wrapper:
                 WrapperView wrapperView = new WrapperView(mBtnObjWrapperAnimator);
                 ObjectAnimator.ofInt(wrapperView, "width", 200).setDuration(3000).start();
+                break;
+
+            case R.id.btn_property_value_holder:
+                PropertyValuesHolder pvh1 = PropertyValuesHolder.ofFloat("translationX", 300f);
+                PropertyValuesHolder pvh2 = PropertyValuesHolder.ofFloat("scaleX", 1f, 0, 1f);
+                PropertyValuesHolder pvh3 = PropertyValuesHolder.ofFloat("scaleY", 1f, 0, 1f);
+                ObjectAnimator objAnim2 = ObjectAnimator.ofPropertyValuesHolder(mBtnPropertyValueHolder, pvh1, pvh2, pvh3);
+                objAnim2.setDuration(1500);
+                objAnim2.start();
+                break;
+
+            case R.id.btn_value_animator:
+                ValueAnimator valueAnim = ValueAnimator.ofFloat(0, 200);
+                valueAnim.setTarget(mBtnValueAnimator);
+                valueAnim.setDuration(1500);
+                valueAnim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                    @Override
+                    public void onAnimationUpdate(ValueAnimator animation) {
+                        Float value = (Float) animation.getAnimatedValue();
+                        Log.d("VALUE_ANIMATOR", ">>>>> animation.getAnimatedValue: " + value);
+                    }
+                });
                 break;
         }
     }

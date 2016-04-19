@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 320* screen margins, per the Android Design guidelines. -->
+
+    <dimen name="textcursor_bottom">-18sp</dimen>
+
+    
+</resources>

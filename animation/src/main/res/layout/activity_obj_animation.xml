@@ -30,6 +30,20 @@
         android:textSize="@dimen/dimen_35sp"
         android:text="OBJANIM_WRAPPER_VIEW"/>
 
+        <Button
+        android:id="@+id/btn_property_value_holder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/dimen_35sp"
+        android:text="Property_Value_Holder"/>
+
+        <Button
+        android:id="@+id/btn_value_animator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/dimen_35sp"
+        android:text="VALUE_ANIMATOR"/>
+
     </LinearLayout>
 
 </ScrollView>

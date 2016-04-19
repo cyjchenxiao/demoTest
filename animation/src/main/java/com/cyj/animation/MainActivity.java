@@ -16,11 +16,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
-
-
-
         Button btn_ViewAnimation = (Button) findViewById(R.id.btn_view_animation);
         btn_ViewAnimation.setOnClickListener(this);
 

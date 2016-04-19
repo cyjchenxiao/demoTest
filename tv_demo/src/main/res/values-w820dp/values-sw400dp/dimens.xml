@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 1200* screen margins, per the Android Design guidelines. -->
+
+    <dimen name="textcursor_bottom">-10sp</dimen>
+    <dimen name="homegrid_horizspace">20dp</dimen>
+    <dimen name="homegrid_vertispace">20dp</dimen>
+    <dimen name="albumlist_grid_item_padding">20dp</dimen>
+    
+
+    
+</resources>

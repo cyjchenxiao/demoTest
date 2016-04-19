@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Android_cyj.iml" filepath="$PROJECT_DIR$/Android_cyj.iml" />
+      <module fileurl="file://$PROJECT_DIR$/animation/animation.iml" filepath="$PROJECT_DIR$/animation/animation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/draw/draw.iml" filepath="$PROJECT_DIR$/draw/draw.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scroller/scroller.iml" filepath="$PROJECT_DIR$/scroller/scroller.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tv_demo/tv_demo.iml" filepath="$PROJECT_DIR$/tv_demo/tv_demo.iml" />
+    </modules>
+  </component>
+</project>
