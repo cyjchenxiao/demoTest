@@ -23,6 +23,7 @@ public class PropertyAnimationActivity extends AppCompatActivity implements View
     private Button mBtnValueAnimator;
     private Button mBtnAnimatorSet;
     private Button mBtnAnimatorXML;
+    private Button mBtnViewAnimate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +47,9 @@ public class PropertyAnimationActivity extends AppCompatActivity implements View
 
         mBtnAnimatorXML = (Button) findViewById(R.id.btn_animator_xml);
         mBtnAnimatorXML.setOnClickListener(this);
+
+        mBtnViewAnimate = (Button) findViewById(R.id.btn_view_animate);
+        mBtnViewAnimate.setOnClickListener(this);
 
     }
 
@@ -110,6 +114,30 @@ public class PropertyAnimationActivity extends AppCompatActivity implements View
                 Animator animator = AnimatorInflater.loadAnimator(this, R.animator.obj_animator_test);
                 animator.setTarget(mBtnAnimatorXML);
                 animator.start();
+                break;
+
+            case R.id.btn_view_animate:
+                mBtnViewAnimate.animate()
+                        .alpha(0)
+                        .x(300)
+                        .setDuration(1500)
+                        .withStartAction(new Runnable() {
+                            @Override
+                            public void run() {
+
+                            }
+                        })
+                        .withEndAction(new Runnable() {
+                            @Override
+                            public void run() {
+                                mBtnViewAnimate.animate()
+                                        .alpha(1)
+                                        .x(0)
+                                        .setDuration(1500)
+                                        .start();
+                            }
+                        })
+                        .start();
                 break;
         }
     }

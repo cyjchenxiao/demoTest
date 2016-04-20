@@ -58,6 +58,13 @@
         android:textSize="@dimen/dimen_35sp"
         android:text="ANIMATOR_XML"/>
 
+        <Button
+        android:id="@+id/btn_view_animate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/dimen_35sp"
+        android:text="VIEW_ANIMATE"/>
+
     </LinearLayout>
 
 </ScrollView>
