@@ -44,6 +44,20 @@
         android:textSize="@dimen/dimen_35sp"
         android:text="VALUE_ANIMATOR"/>
 
+        <Button
+        android:id="@+id/btn_animatorSet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/dimen_35sp"
+        android:text="ANIMATOR_SET"/>
+
+        <Button
+        android:id="@+id/btn_animator_xml"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/dimen_35sp"
+        android:text="ANIMATOR_XML"/>
+
     </LinearLayout>
 
 </ScrollView>

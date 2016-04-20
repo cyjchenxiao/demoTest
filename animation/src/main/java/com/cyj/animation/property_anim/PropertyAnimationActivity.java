@@ -1,5 +1,8 @@
 package com.cyj.animation.property_anim;
 
+import android.animation.Animator;
+import android.animation.AnimatorInflater;
+import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
 import android.animation.ValueAnimator;
@@ -12,12 +15,14 @@ import android.widget.Button;
 import com.cyj.animation.R;
 import com.cyj.animation.property_anim.obj_wrapper_view.WrapperView;
 
-public class PropertyAnimationActivity extends AppCompatActivity implements View.OnClickListener{
+public class PropertyAnimationActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button mBtnObjAnimTranslation;
     private Button mBtnObjWrapperAnimator;
     private Button mBtnPropertyValueHolder;
     private Button mBtnValueAnimator;
+    private Button mBtnAnimatorSet;
+    private Button mBtnAnimatorXML;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,11 +41,17 @@ public class PropertyAnimationActivity extends AppCompatActivity implements View
         mBtnValueAnimator = (Button) findViewById(R.id.btn_value_animator);
         mBtnValueAnimator.setOnClickListener(this);
 
+        mBtnAnimatorSet = (Button) findViewById(R.id.btn_animatorSet);
+        mBtnAnimatorSet.setOnClickListener(this);
+
+        mBtnAnimatorXML = (Button) findViewById(R.id.btn_animator_xml);
+        mBtnAnimatorXML.setOnClickListener(this);
+
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.btn_objanim_translation:
                 ObjectAnimator objAnim = ObjectAnimator.ofFloat(
                         mBtnObjAnimTranslation,
@@ -81,6 +92,24 @@ public class PropertyAnimationActivity extends AppCompatActivity implements View
                         Log.d("VALUE_ANIMATOR", ">>>>> animation.getAnimatedValue: " + value);
                     }
                 });
+                break;
+
+            case R.id.btn_animatorSet:
+                ObjectAnimator objAnim1 = ObjectAnimator.ofFloat(mBtnAnimatorSet, "translationX", 300f);
+                ObjectAnimator objAnim3 = ObjectAnimator.ofFloat(mBtnAnimatorSet, "alpha", 0f, 1f);
+                ObjectAnimator objAnim4 = ObjectAnimator.ofFloat(mBtnAnimatorSet, "translationX", 0f);
+
+                AnimatorSet set = new AnimatorSet();
+                set.setDuration(2000);
+                set.playTogether(objAnim1, objAnim3);
+                set.play(objAnim4).after(objAnim1);
+                set.start();
+                break;
+
+            case R.id.btn_animator_xml:
+                Animator animator = AnimatorInflater.loadAnimator(this, R.animator.obj_animator_test);
+                animator.setTarget(mBtnAnimatorXML);
+                animator.start();
                 break;
         }
     }
