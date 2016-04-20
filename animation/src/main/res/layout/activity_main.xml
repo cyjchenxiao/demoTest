@@ -31,6 +31,14 @@
             android:textSize="@dimen/dimen_35sp"
             android:text="PROPERTY_ANIMATION"/>
 
+        <Button
+            android:id="@+id/btn_layout_animation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/dimen_35sp"
+            android:text="Layout_Animation"/>
+
 
     </LinearLayout>
 </ScrollView>
