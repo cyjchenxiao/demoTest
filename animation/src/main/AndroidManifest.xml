@@ -17,7 +17,8 @@
         </activity>
         <activity android:name=".view_anim.ViewAnimActivity" />
         <activity android:name=".property_anim.PropertyAnimationActivity" />
-        <activity android:name=".layout_anim.LayoutAnimationActivity"></activity>
+        <activity android:name=".layout_anim.LayoutAnimationActivity" />
+        <activity android:name=".custom_anim.CustomAnimationActivity"></activity>
     </application>
 
 </manifest>
