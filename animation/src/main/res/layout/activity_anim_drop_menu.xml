@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:orientation="vertical"
+    tools:context="com.cyj.animation.anim_menu.AnimDropMenuActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:onClick="onIIClick"
+        android:background="@android:color/darker_gray">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:textSize="@dimen/dimen_30sp"
+            android:text="Click Me"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/hidden_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_80dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@android:color/holo_orange_light"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:textSize="@dimen/dimen_30sp"
+            android:text="This is hidden view"/>
+
+    </LinearLayout>
+
+</LinearLayout>

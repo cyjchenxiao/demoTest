@@ -47,6 +47,31 @@
             android:textSize="@dimen/dimen_35sp"
             android:text="Custom_Animation"/>
 
+        <Button
+            android:id="@+id/btn_anim_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/dimen_35sp"
+            android:text="Animator_Menu"/>
+
+        <Button
+            android:id="@+id/btn_anim_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/dimen_35sp"
+            android:text="Animator_Timer"
+            android:onClick="onTimer"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/dimen_35sp"
+            android:text="Animator_Drop_Hidden_View"
+            android:onClick="onDropHiddenView"/>
+
 
     </LinearLayout>
 </ScrollView>

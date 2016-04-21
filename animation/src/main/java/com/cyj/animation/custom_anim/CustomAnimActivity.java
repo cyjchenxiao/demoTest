@@ -6,7 +6,7 @@ import android.view.View;
 
 import com.cyj.animation.R;
 
-public class CustomAnimationActivity extends AppCompatActivity {
+public class CustomAnimActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -6,7 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.cyj.animation.custom_anim.CustomAnimationActivity;
+import com.cyj.animation.anim_menu.AnimDropMenuActivity;
+import com.cyj.animation.anim_menu.AnimMenuActivity;
+import com.cyj.animation.anim_menu.AnimTimerActivity;
+import com.cyj.animation.custom_anim.CustomAnimActivity;
 import com.cyj.animation.layout_anim.LayoutAnimationActivity;
 import com.cyj.animation.property_anim.PropertyAnimationActivity;
 import com.cyj.animation.view_anim.ViewAnimActivity;
@@ -29,6 +32,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Button btn_CustomAnimation = (Button) findViewById(R.id.btn_custom_animation);
         btn_CustomAnimation.setOnClickListener(this);
+
+        Button btn_AnimatorMenu = (Button) findViewById(R.id.btn_anim_menu);
+        btn_AnimatorMenu.setOnClickListener(this);
     }
 
     @Override
@@ -47,8 +53,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.btn_custom_animation:
-                startActivity(new Intent(this, CustomAnimationActivity.class));
+                startActivity(new Intent(this, CustomAnimActivity.class));
+                break;
+
+            case R.id.btn_anim_menu:
+                startActivity(new Intent(this, AnimMenuActivity.class));
                 break;
         }
+    }
+
+    public void onTimer(View view){
+        startActivity(new Intent(this, AnimTimerActivity.class));
+    }
+
+    public void onDropHiddenView(View view){
+        startActivity(new Intent(this, AnimDropMenuActivity.class));
     }
 }

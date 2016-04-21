@@ -87,8 +87,6 @@ public class PropertyAnimationActivity extends AppCompatActivity implements View
 
             case R.id.btn_value_animator:
                 ValueAnimator valueAnim = ValueAnimator.ofFloat(0, 200);
-                valueAnim.setTarget(mBtnValueAnimator);
-                valueAnim.setDuration(1500);
                 valueAnim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                     @Override
                     public void onAnimationUpdate(ValueAnimator animation) {
@@ -96,6 +94,8 @@ public class PropertyAnimationActivity extends AppCompatActivity implements View
                         Log.d("VALUE_ANIMATOR", ">>>>> animation.getAnimatedValue: " + value);
                     }
                 });
+                valueAnim.setDuration(1500);
+                valueAnim.start();
                 break;
 
             case R.id.btn_animatorSet:
