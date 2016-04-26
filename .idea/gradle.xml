@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/animation" />
+            <option value="$PROJECT_DIR$/design_pattern" />
             <option value="$PROJECT_DIR$/draw" />
             <option value="$PROJECT_DIR$/scroller" />
             <option value="$PROJECT_DIR$/tv_demo" />
@@ -18,6 +19,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/animation" />
+            <option value="$PROJECT_DIR$/design_pattern" />
             <option value="$PROJECT_DIR$/draw" />
             <option value="$PROJECT_DIR$/scroller" />
             <option value="$PROJECT_DIR$/tv_demo" />

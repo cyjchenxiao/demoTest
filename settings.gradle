@@ -1,1 +1,1 @@
-include ':scroller', ':draw', ':animation', ':tv_demo'
+include ':scroller', ':draw', ':animation', ':tv_demo', ':design_pattern'
